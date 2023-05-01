@@ -1,0 +1,21 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Captions Generator </title>
+</head>
+<body>
+    <h1>Captions Generator </h1>
+    <form action="/home" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" >
+        <button type="submit">Submit</button>
+    </form>
+   
+    <% if (result) { %>
+     
+       <h1><%= result.generated_text %></h1>
+    
+    <% } %>
+</body>
+</html>
